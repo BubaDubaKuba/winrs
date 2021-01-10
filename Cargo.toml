@@ -1,0 +1,22 @@
+[package]
+name = "winrs"
+version = "0.1.0"
+authors = ["BubaDubaKuba@yandex.ru"]
+edition = "2018"
+description = "Collection of \"rusty\" winapi wrappers. Work in progress!"
+repository = "https://github.com/BubaDubaKuba/winrs"
+license = "MIT"
+keywords = ["windows", "win32"]
+categories = ["os::windows-apis", "api-bindings"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = {version = "0.3.9", features = ["ntdef", "errhandlingapi"]}
+# cargo-expand = "1.0.4"
+
+[features]
+default = ["clipboard"]
+clipboard = ["winapi/winuser"]
+console = ["winapi/consoleapi", "winapi/wincon"]
+
