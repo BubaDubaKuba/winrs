@@ -1,1 +1,1 @@
-test
+Collection of \"rusty\" winapi wrappers. Work in progress!
